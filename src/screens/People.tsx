@@ -28,13 +28,15 @@ export default function People() {
 
   return (
     <SafeAreaView>
-      <View style={[styles.view]}>
+      <View style={[styles.flex]}>
         <TopBar>
         <Image style={[styles.logo]}
               source={require('../assets/images/recycle.png')} />
       </TopBar>
-      <View style={[styles.view, styles.top]}>
+      <View style={[styles.flex, styles.top]}>
         <Text style={[styles.text]}>누군가의 이야기</Text>
+      </View>
+      <View style={[styles.view, styles.top]}>
         <Text style={[styles.ltext]}>#용기내</Text>
         <Text style={[styles.ltext]}>#플라스틱어택</Text>
         <Text style={[styles.ltext]}>#지구를지켜요</Text>
@@ -45,9 +47,10 @@ export default function People() {
 }
 const styles = StyleSheet.create({
   view: {flex: 1},
+  flex: {flex:1, backgroundColor: 'white'},
   text: {marginRight: 10, fontSize: 20},
-  top: {marginTop: 20},
-  text: {fontSize: 30, marginLeft: 20},
+  top: {marginTop: 10},
+  text: {fontFamily: 'NotoSansKR-Bold', fontSize: 30, marginTop: 0, marginLeft: 12, lineHeight: 40},
   ltext: {fontSize: 60, marginLeft: 20},
   stext: {fontSize: 16, marginLeft: 20, marginTop: 4, marginRight: 16, marginBottom: 16},
   logo: {width: 30, height: 30}

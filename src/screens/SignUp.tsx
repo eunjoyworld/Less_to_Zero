@@ -11,22 +11,10 @@ import * as L from '../store/login'
 
 // prettier-ignore
 export default function SignUp() {
-  const [email, setEmail] = useState<string>(D.randomEmail())
-  const [name, setName] = useState<string>(D.randomName())
-  const [password, setPassword] = useState<string>('1')
-  const [confirmPassword, setConfirmPassword] = useState<string>(password)
-  const focus = useAutoFocus()
   const navigation = useNavigation()
-  const dispatch = useDispatch()
-  
   const goTabNavigator = useCallback(() => {
-    if (password === confirmPassword) {
-      dispatch(L.loginAction({name, email, password}))
-      navigation.navigate('TabNavigator')
-    }
-    else
-      Alert.alert('password is invalid')
-  }, [password, confirmPassword])
+    navigation.navigate('TabNavigator')
+  }, [])
   const goLogin = useCallback(() => navigation.navigate('Login'), [])
 
   return (

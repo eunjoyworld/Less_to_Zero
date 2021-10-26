@@ -15,14 +15,12 @@ import { assets } from '../../react-native.config'
 export default function Home() {
   // navigation
   const navigation = useNavigation()
-  const dispatch = useDispatch()
   const goLeft = useCallback(() => navigation.navigate('HomeLeft'), [])
   const goRight = useCallback(
     () => navigation.navigate('HomeRight', {name: 'Jack', age: 32}), [])
   const open = useCallback(() => {
     navigation.dispatch(DrawerActions.openDrawer())}, [])
   const logout = useCallback(() => {
-    dispatch(L.logoutAction())
     navigation.navigate('Login')
   }, [])
 
@@ -35,9 +33,9 @@ export default function Home() {
       <TopBar>
           <Image style={[styles.logo]}
               source={require('../assets/images/recycle.png')} />
-          <Icon name="logout" size={30} onPress={logout} />
+          <Icon name="logout" size={30} style={styles.icon} onPress={logout} />
           <LeftRightNavigation ref={leftRef} distance={40} onLeftToRight={goLeft} onRightToLeft={goRight} />
-          </TopBar>
+      </TopBar>
 
 
           <View style={[styles.container]}>
@@ -51,9 +49,10 @@ export default function Home() {
 const styles = StyleSheet.create({
   view: {flex: 1, backgroundColor: 'white'},
   topBar: {flexDirection: 'row', padding: 5, justifyContent: 'space-between'},
-  logo : {width: 30, height: 30, justifyContent: 'space-between'},
+  logo: {width: 30, height: 30, justifyContent: 'space-between'},
+  icon: {marginLeft: 334},
   container: {flex: 1, backgroundColor: 'white'},
-  image: {width: 360, height: 600, resizeMode: 'contain', marginTop: 25, marginLeft: 25},
+  image: {width: 360, height: 600, resizeMode: 'contain', marginTop: 35, marginLeft: 25},
   filter: {tintColor: 'gray', opacity: 0.3},
 
   text: {color: 'white', position: 'absolute'},

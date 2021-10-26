@@ -2,7 +2,7 @@ import React, {useState, useCallback} from 'react'
 import {StyleSheet} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 // prettier-ignore
-import {SafeAreaView, View, Text, TextInput, TouchableView, UnderlineText}
+import {SafeAreaView, View, Text, TouchableView, UnderlineText}
 from '../theme'
 import * as D from '../data'
 import {useAutoFocus, AutoFocusProvider} from '../contexts'
@@ -11,15 +11,8 @@ import * as L from '../store/login'
 
 // prettier-ignore
 export default function Login() {
-  const [email, setEmail] = useState<string>(D.randomEmail())
-  const [name, setName] = useState<string>(D.randomName())
-  const [password, setPassword] = useState<string>(
-    D.random(10000, 1000000).toString())
-  const focus = useAutoFocus()
   const navigation = useNavigation()
-  const dispatch = useDispatch()
   const goTabNavigator = useCallback(() => {
-    dispatch(L.loginAction({email, name, password}))
     navigation.navigate('TabNavigator')
   }, [])
   const goSignUp = useCallback(() => navigation.navigate('SignUp'), [])

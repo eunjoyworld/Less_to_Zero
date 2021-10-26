@@ -1,11 +1,16 @@
 import React from 'react'
 import {createDrawerNavigator} from '@react-navigation/drawer'
+import {createStackNavigator} from '@react-navigation/stack'
 import Login from './Login'
 import SignUp from './SignUp'
 import TabNavigator from './TabNavigator'
 import DrawerContent from './DrawerContent'
 
+import Refuse from './Refuse'
+import Reuse from './Reuse'
+
 const Drawer = createDrawerNavigator()
+const Stack = createStackNavigator()
 
 export default function MainNavigator() {
   return (
@@ -18,6 +23,8 @@ export default function MainNavigator() {
         name="TabNavigator"
         component={TabNavigator}
       />
+      <Stack.Screen name="Refuse" component={Refuse} />
+      <Stack.Screen name="Reuse" component={Reuse} />
     </Drawer.Navigator>
   )
 }
