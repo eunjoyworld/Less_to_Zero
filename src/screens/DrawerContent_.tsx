@@ -23,6 +23,20 @@ const DrawerContent: FC<DrawerContentComponentProps> = props => {
   const close = useCallback(
     () => navigation.dispatch(DrawerActions.closeDrawer()), [])
   
+    if (!loggedIn) {
+    return (
+      <DrawerContentScrollView {...props} contentContainerStyle={[styles.view]}>
+        <NavigationHeader
+          Right={() => <Icon name="close" size={24} onPress={close} />} />
+        <View style={[styles.content]}>
+          <Text style={[styles.text]}>Please login or signup.</Text>
+          <View style={[styles.row, {marginTop: 20}]}>
+            <Switch />
+          </View>
+        </View>
+      </DrawerContentScrollView>
+    )
+  }
 
   return (
     <DrawerContentScrollView {...props} contentContainerStyle={[styles.view]}>
@@ -30,7 +44,7 @@ const DrawerContent: FC<DrawerContentComponentProps> = props => {
         <Icon name="close" size={24} onPress={close} />} />
       <View style={[styles.content]}>
         <View style={[styles.row]}>
-          <Text style={[styles.text, styles.m]}>일상에서 만나는{'\n'}친환경 라이프 스타일</Text>
+          <Text style={[styles.text, styles.m]}>일상에서 만나는 제로웨이스트</Text>
         </View>
         <View style={[styles.row]}>
           <UnderlineText numberOfLines={1} ellipsizeMode="tail"

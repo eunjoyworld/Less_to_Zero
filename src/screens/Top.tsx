@@ -30,11 +30,12 @@ export default function Home() {
   
   return (
     <SafeAreaView>
-          <View style={[styles.container]}>
-            <Image style={[styles.image]} source={require('../assets/images/trash001.jpg')} />
-            <Text style={[styles.text, styles.firtext]}>쌓여가는{'\n'}쓰레기 더미 </Text>
-            <Text style={[styles.text, styles.stext]}>편리하게 사용하는 일상의 도구들은 모두 쓰레기가 되어갑니다. </Text>
-        </View>
+      <TopBar>
+          <Image style={[styles.logo]}
+              source={require('../assets/images/recycle.png')} />
+          <Icon name="menu" size={30} style={styles.icon} onPress={open} />
+          <LeftRightNavigation ref={leftRef} distance={40} onLeftToRight={goLeft} onRightToLeft={goRight} />
+      </TopBar>
     </SafeAreaView>
   )
 }

@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useCallback, useRef} from 'react'
+import {StyleSheet, Image, Text} from 'react-native'
+import {useNavigation, DrawerActions, StackActions} from '@react-navigation/native'
+import {SafeAreaView, View, UnderlineText, TopBar, NavigationHeader} from '../theme'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {Colors} from 'react-native-paper'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
+import Top from './Top'
 import HomeNavigator from './HomeNavigator'
 import Counter from './Counter'
 import Clock from './Clock'
@@ -10,6 +14,7 @@ import People from './People'
 import UseReducer from './UseReducer'
 
 import type {RouteProp, ParamListBase} from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 type TabBarIconProps = {focused: boolean; color: string; size: number}
 
 const icons: Record<string, string[]> = {
@@ -29,12 +34,15 @@ const screenOptions = ({route}: {route: RouteProp<ParamListBase, string>}) => {
       const focusedColor = focused ? Colors.lightGreen500 : color
       const [icon, iconOutline] = icons[name]
       const iconName = focused ? icon : iconOutline
-      return <Icon name={iconName} size={focusedSize} color={focusedColor} />
-    }
+      return <Icon name={iconName} size={focusedSize} color={color} />
+    },
+    tabBarInactiveTintColor: 'grey',
+    tabBarActiveTintColor: 'darkgreen'
   }
 }
 
 const Tab = createBottomTabNavigator()
+const Stack = createStackNavigator()
 // prettier-ignore
 export default function TabNavigator() {
   return (
@@ -47,3 +55,10 @@ export default function TabNavigator() {
     </Tab.Navigator>
   )
 }
+
+const styles = StyleSheet.create({
+  view: {flex: 1, backgroundColor: 'white'},
+  topBar: {flexDirection: 'row', padding: 5, justifyContent: 'space-between'},
+  logo: {width: 30, height: 30, justifyContent: 'space-between'},
+  icon: {marginLeft: 330, color: 'grey'},
+})

@@ -62,10 +62,6 @@ export default function Clock() {
   return  (
   <>
     <View style={[styles.flex]}>
-      <TopBar>
-        <Image style={[styles.logo]}
-             source={require('../assets/images/recycle.png')} />
-      </TopBar>
       <SafeAreaView>
       <View style={[styles.flex, styles.top]}>
         <Text style={[styles.text]}>공간 지도</Text>

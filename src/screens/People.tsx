@@ -29,10 +29,6 @@ export default function People() {
   return (
     <SafeAreaView>
       <View style={[styles.flex]}>
-        <TopBar>
-        <Image style={[styles.logo]}
-              source={require('../assets/images/recycle.png')} />
-      </TopBar>
       <View style={[styles.flex, styles.top]}>
         <Text style={[styles.text]}>누군가의 이야기</Text>
       </View>

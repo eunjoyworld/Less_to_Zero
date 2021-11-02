@@ -13,15 +13,12 @@ export default function UseReducer() {
     navigation.navigate('TabNavigator')
   }, [])
   const goSignUp = useCallback(() => navigation.navigate('SignUp'), [])
+  const goAsk = useCallback(() => navigation.navigate('Ask'), [])
 
     return (
       <View style={[styles.flex]}>
-      <TopBar>
-        <Image style={[styles.logo]}
-              source={require('../assets/images/recycle.png')} />
-      </TopBar>
       <TouchableView notification style={[styles.top, styles.touchableView]}
-            onPress={goTabNavigator}>
+            onPress={goAsk}>
             <Icon name="wrench" size={24} style={styles.icon} />
             <Text style={styles.name}> 문의하기 </Text>
         </TouchableView>

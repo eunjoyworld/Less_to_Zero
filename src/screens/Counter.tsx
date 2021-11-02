@@ -32,10 +32,6 @@ export default function Counter() {
   return (
     <ScrollView contentContainerStyle={[styles.view]}>
     <View style={[styles.flex]}>
-      <TopBar>
-        <Image style={[styles.logo]}
-              source={require('../assets/images/recycle.png')} onPress={open} />
-      </TopBar>
       <View style={[styles.suflex, styles.sutop]}>
         <Text style={[styles.sutext]}>일상의 선택, {'\n'}친환경 라이프 스타일</Text>
         <Text style={[styles.sustext]}>크고 작은 선택에서 시작하는 환경의 변화</Text>

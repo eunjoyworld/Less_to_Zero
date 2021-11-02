@@ -6,6 +6,9 @@ import SignUp from './SignUp'
 import TabNavigator from './TabNavigator'
 import DrawerContent from './DrawerContent'
 
+import Top from './Top'
+import Ask from './Ask'
+
 import Refuse from './Refuse'
 import Reuse from './Reuse'
 
@@ -25,6 +28,7 @@ export default function MainNavigator() {
       />
       <Stack.Screen name="Refuse" component={Refuse} />
       <Stack.Screen name="Reuse" component={Reuse} />
+      <Stack.Screen name="Ask" component={Ask} />
     </Drawer.Navigator>
   )
 }

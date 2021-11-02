@@ -3,7 +3,7 @@ import {StyleSheet, Alert} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 import {useDispatch} from 'react-redux'
 // prettier-ignore
-import {SafeAreaView, View, Text, TextInput, TouchableView, MaterialCommunityIcon as Icon}
+import {SafeAreaView, View, Text, TextInput, TouchableView, MaterialCommunityIcon as Icon, TopBar}
 from '../theme'
 import * as D from '../data'
 import {useAutoFocus, AutoFocusProvider} from '../contexts'
@@ -16,7 +16,9 @@ export default function Refuse() {
 
   return (
     <SafeAreaView>
-      <Icon name="arrow-left" size={30} onPress={goBack} style={styles.back} />
+      <TopBar>
+      <Icon name="arrow-left" size={26} onPress={goBack} style={styles.back} />
+      </TopBar>
       <View style={[styles.view]}>
         <AutoFocusProvider
           contentContainerStyle={[styles.keyboardAwareFocus]}>
@@ -43,5 +45,5 @@ const styles = StyleSheet.create({
   textView: {width: '100%', padding: 5, marginBottom: 10},
   touchableView: {flexDirection: 'row', height: 50, borderRadius: 10, width: '50%',
     justifyContent: 'center', alignItems: 'center', backgroundColor: 'green'},
-    back: {marginTop: 20, marginLeft: 20}
+    back: {}
 })
