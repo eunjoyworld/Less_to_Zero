@@ -20,11 +20,11 @@ export default function Refuse() {
         <AutoFocusProvider
           contentContainerStyle={[styles.keyboardAwareFocus]}>
           <View style={[styles.textView]}>
-            <Text style={[styles.mtop]}>REFUSE</Text>
-            <Text style={[styles.mtext]}>불필요한 물건은 거절하기</Text>
+            <Text style={[styles.mtop]}>ROT</Text>
+            <Text style={[styles.mtext]}>자연으로 돌아갈 생분해 제품 사용하기</Text>
           </View>
           <View style={[styles.textView]}>  
-            <Text style={[styles.stext]}>거절은 쉽지 않은 선택입니다.{'\n'}영수증, 비닐봉투</Text>
+            <Text style={[styles.stext]}>어쩌면 신중을 기하는 소비{'\n'}되도록이면 자연유래</Text>
           </View>
         </AutoFocusProvider>
       </View>

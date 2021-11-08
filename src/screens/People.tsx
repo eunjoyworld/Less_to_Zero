@@ -31,6 +31,7 @@ export default function People() {
       <View style={[styles.flex]}>
       <View style={[styles.flex, styles.top]}>
         <Text style={[styles.text]}>누군가의 이야기</Text>
+        <Text style={[styles.text]}>그린워싱, 그린버블</Text>
       </View>
       <View style={[styles.view, styles.top]}>
         <Text style={[styles.ltext]}>#용기내</Text>
@@ -44,9 +45,8 @@ export default function People() {
 const styles = StyleSheet.create({
   view: {flex: 1},
   flex: {flex:1, backgroundColor: 'white'},
-  text: {marginRight: 10, fontSize: 20},
   top: {marginTop: 10},
-  text: {fontFamily: 'NotoSansKR-Bold', fontSize: 30, marginTop: 0, marginLeft: 12, lineHeight: 40},
+  text: {fontFamily: 'NotoSansKR-Bold', fontSize: 30, marginRight: 10, marginTop: 10, marginLeft: 12},
   ltext: {fontSize: 60, marginLeft: 20},
   stext: {fontSize: 16, marginLeft: 20, marginTop: 4, marginRight: 16, marginBottom: 16},
   logo: {width: 30, height: 30}

@@ -42,8 +42,6 @@ export default function Home() {
     </SafeAreaView>
   )
 }
-
-
 const styles = StyleSheet.create({
   view: {flex: 1, backgroundColor: 'white'},
   topBar: {flexDirection: 'row', padding: 5, justifyContent: 'space-between'},
@@ -53,7 +51,7 @@ const styles = StyleSheet.create({
   image: {width: 360, height: 600, resizeMode: 'contain', marginTop: 35, marginLeft: 25},
   filter: {tintColor: 'gray', opacity: 0.3},
 
-  text: {color: 'white', position: 'absolute'},
-  firtext: {fontFamily: 'NotoSansKR-Bold', fontSize: 44, textAlign: 'left', marginTop: 245, marginLeft: 50},
-  stext: {fontFamily: 'NotoSansKR-Medium', fontSize: 20, marginTop: 450, marginLeft: 50, marginRight: 50}
+  base: {color: 'white', position: 'absolute'},
+  title: {fontFamily: 'NotoSansKR-Bold', fontSize: 44, textAlign: 'left', marginTop: 245, marginLeft: 50},
+  body: {fontFamily: 'NotoSansKR-Medium', fontSize: 20, marginTop: 450, marginLeft: 50, marginRight: 50}
 })

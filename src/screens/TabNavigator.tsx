@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import Top from './Top'
 import HomeNavigator from './HomeNavigator'
+import SugNavigator from './SugNavigator'
 import Counter from './Counter'
 import Clock from './Clock'
 import People from './People'
@@ -15,6 +16,7 @@ import UseReducer from './UseReducer'
 
 import type {RouteProp, ParamListBase} from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+
 type TabBarIconProps = {focused: boolean; color: string; size: number}
 
 const icons: Record<string, string[]> = {
@@ -48,9 +50,9 @@ export default function TabNavigator() {
   return (
     <Tab.Navigator screenOptions={screenOptions}>
       <Tab.Screen name="HomeNavigator" component={HomeNavigator} options={{tabBarLabel: '메인'}} />
-      <Tab.Screen name="Counter" component={Counter} options={{tabBarLabel: '제안'}} />
+      <Tab.Screen name="Counter" component={SugNavigator} options={{tabBarLabel: '제안'}} />
       <Tab.Screen name="Clock" component={Clock} options={{tabBarLabel: '지도'}} />
-      <Tab.Screen name="People" component={People} options={{tabBarLabel: "커뮤니티", tabBarBadge: 1}} />
+      <Tab.Screen name="People" component={People} options={{tabBarLabel: '커뮤니티'}} />
       <Tab.Screen name="UseReducer" component={UseReducer} options={{tabBarLabel: '기타'}} />
     </Tab.Navigator>
   )

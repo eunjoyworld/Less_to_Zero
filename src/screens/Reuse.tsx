@@ -17,7 +17,6 @@ export default function Refuse() {
   return (
     <ScrollView>
     <SafeAreaView>
-      <Icon name="arrow-left" size={30} onPress={goBack} style={styles.back} />
       <View style={[styles.view]}>
         <AutoFocusProvider
           contentContainerStyle={[styles.keyboardAwareFocus]}>

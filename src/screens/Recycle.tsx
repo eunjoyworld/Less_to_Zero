@@ -20,11 +20,11 @@ export default function Refuse() {
         <AutoFocusProvider
           contentContainerStyle={[styles.keyboardAwareFocus]}>
           <View style={[styles.textView]}>
-            <Text style={[styles.mtop]}>REFUSE</Text>
-            <Text style={[styles.mtext]}>불필요한 물건은 거절하기</Text>
+            <Text style={[styles.mtop]}>RECYCLE</Text>
+            <Text style={[styles.mtext]}>일회용품보다 다회용 제품을 이용하기</Text>
           </View>
           <View style={[styles.textView]}>  
-            <Text style={[styles.stext]}>거절은 쉽지 않은 선택입니다.{'\n'}영수증, 비닐봉투</Text>
+            <Text style={[styles.stext]}>생각보다 많이 사용해야 효과가 나타난다?{'\n'}그렇다면, 그동안 사용되는 일회용품은 어떻게 설명이 될까?</Text>
           </View>
         </AutoFocusProvider>
       </View>

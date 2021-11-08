@@ -8,6 +8,13 @@ import DrawerContent from './DrawerContent'
 
 import Top from './Top'
 import Ask from './Ask'
+import Privacy from './Privacy'
+import Tac from './Tac'
+import Tacforplace from './Tacforplace'
+import Managementp from './Managementp'
+import Opensource from './Opensource'
+import Teamintro from './Teamintro'
+import Version from './Version'
 
 import Refuse from './Refuse'
 import Reuse from './Reuse'
@@ -29,6 +36,13 @@ export default function MainNavigator() {
       <Stack.Screen name="Refuse" component={Refuse} />
       <Stack.Screen name="Reuse" component={Reuse} />
       <Stack.Screen name="Ask" component={Ask} />
+      <Stack.Screen name="Privacy" component={Privacy} />
+      <Stack.Screen name="Tac" component={Tac} />
+      <Stack.Screen name="Tacforplace" component={Tacforplace} />
+      <Stack.Screen name="Managementp" component={Managementp} />
+      <Stack.Screen name="Opensource" component={Opensource} />
+      <Stack.Screen name="Teamintro" component={Teamintro} />
+      <Stack.Screen name="Version" component={Version} />
     </Drawer.Navigator>
   )
 }
